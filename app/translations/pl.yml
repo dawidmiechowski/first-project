@@ -1,2 +1,11 @@
 pl:
   greeting: Dzien dobry świecie
+
+  "Europe/Oslo": "Oslo w Europie"
+  "America/Chicago": "Chicago w Ameryce"
+  "Sydney": "Sydney"
+  "Tokyo": "Tokyo"
+  "Singapore": "Singapore"
+  "Mumbai": "Mumbai"
+  "Moscow": "Moscow"
+  "Auckland": "Auckland"

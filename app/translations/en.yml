@@ -1,2 +1,11 @@
 en:
   greeting: Hello world
+
+  "Europe/Oslo": "Oslo in Europe"
+  "America/Chicago": "Chicago in America"
+  "Sydney": "Sydney"
+  "Tokyo": "Tokyo"
+  "Singapore": "Singapore"
+  "Mumbai": "Mumbai"
+  "Moscow": "Moscow"
+  "Auckland": "Auckland"

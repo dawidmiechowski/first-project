@@ -1,1 +1,19 @@
-div
+{% assign locales = '["pl", "us"]' | parse_json %}
+<nav>
+  {% for locale in locales %}
+    <a href="?lang={{locale}}"><img src="{{ 'images/locales/' | append: locale | append: '.png' | asset_url }}"></a>
+  {% endfor %}
+</nav>
+<section class="container">
+  {% assign time_zones = '["Europe/Oslo", "America/Chicago", "Sydney", "Tokyo", "Singapore", "Mumbai", "Moscow", "Auckland"]' | parse_json %}
+
+  {% for tz in time_zones %}
+    <div class="tz">
+      <span class="tz-name">{{ tz | translate: locale: context.params.lang }}</span>
+      <span class="tz-time">{{ 'now' | to_time: tz }}</span>
+    </div>
+
+  {% endfor %}
+
+</section>
+
