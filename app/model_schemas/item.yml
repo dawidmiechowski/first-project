@@ -1,0 +1,6 @@
+name: item
+properties:
+  - name: name
+    type: string
+  - name: price
+    type: integer
