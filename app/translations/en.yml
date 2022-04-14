@@ -1,7 +1,11 @@
 en:
+  time:
+    formats:
+      pl: "%Y/%m/%d %H:%M:%S"
   greeting: Hello world
 
   "Europe/Oslo": "Oslo in Europe"
+  "Europe/Warsaw": "Warsaw in Europe"
   "America/Chicago": "Chicago in America"
   "Sydney": "Sydney"
   "Tokyo": "Tokyo"

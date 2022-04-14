@@ -1,19 +1,41 @@
+{% parse_json time_zones %}
+[
+  { "name": "Europe/Oslo",     "lang": "no", "format": "long", "coords": [59.911491, 10.757933] },
+  { "name": "Europe/Warsaw",   "lang": "pl", "format": "pl" },
+  { "name": "America/Chicago", "lang": "en", "format": "long", "coords": [-33.865143, 151.209900] },
+  { "name": "Sydney",          "lang": "en", "format": "long" },
+  { "name": "Tokyo",           "lang": "ja", "format": "long" },
+  { "name": "Singapore",       "lang": "en", "format": "long" },
+  { "name": "Mumbai",          "lang": "en", "format": "long" },
+  { "name": "Moscow",          "lang": "ru", "format": "long" },
+  { "name": "Auckland",        "lang": "en", "format": "long" }
+]
+{% log locales, type: "locales" %}
+
+{% endparse_json %}
+
 {% assign locales = '["pl", "us"]' | parse_json %}
 <nav>
   {% for locale in locales %}
     <a href="?lang={{locale}}"><img src="{{ 'images/locales/' | append: locale | append: '.png' | asset_url }}"></a>
   {% endfor %}
 </nav>
+
 <section class="container">
-  {% assign time_zones = '["Europe/Oslo", "America/Chicago", "Sydney", "Tokyo", "Singapore", "Mumbai", "Moscow", "Auckland"]' | parse_json %}
 
   {% for tz in time_zones %}
     <div class="tz">
-      <span class="tz-name">{{ tz | translate: locale: context.params.lang }}</span>
-      <span class="tz-time">{{ 'now' | to_time: tz }}</span>
+      <span class="tz-name">{{ tz.name | translate: locale: context.params.lang }}</span>
+      <span class="tz-time">{{ 'now' | to_time: tz.name | l: tz.format }}</span>
+      <span class="tz-coords">{{ tz.coords }}</span>
+      <span class="tz-coords">
+        {% if tz.coords %}
+          <button name="weather" value="{{tz.coords}}">get temperature</button>
+        {% endif %}
+      </span>
+
     </div>
 
   {% endfor %}
 
 </section>
-

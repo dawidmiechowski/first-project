@@ -4,8 +4,23 @@
   border: solid 1px #aaa;
 }
 
+.tz .tz-name {
+  width:  15%;
+  display: inline-block;
+}
+
+.tz .tz-time {
+  width:  25%;
+  display: inline-block;
+}
+
 .tz {
   color: #eee;
+  padding: 5px;
+}
+
+.tz:hover {
+  background-color: #222;
 }
 
 .tz:hover {

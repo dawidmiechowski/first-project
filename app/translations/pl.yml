@@ -2,6 +2,7 @@ pl:
   greeting: Dzien dobry świecie
 
   "Europe/Oslo": "Oslo w Europie"
+  "Europe/Warsaw": "Warszawa w Europie"
   "America/Chicago": "Chicago w Ameryce"
   "Sydney": "Sydney"
   "Tokyo": "Tokyo"
