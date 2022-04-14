@@ -1,9 +1,9 @@
 {% parse_json time_zones %}
 [
   { "name": "Europe/Oslo",     "lang": "no", "format": "long", "coords": [59.911491, 10.757933] },
-  { "name": "Europe/Warsaw",   "lang": "pl", "format": "pl" },
-  { "name": "America/Chicago", "lang": "en", "format": "long", "coords": [-33.865143, 151.209900] },
-  { "name": "Sydney",          "lang": "en", "format": "long" },
+  { "name": "Europe/Warsaw",   "lang": "pl", "format": "pl", "coords": [52.237049, 21.017532]},
+  { "name": "America/Chicago", "lang": "en", "format": "long" },
+  { "name": "Sydney",          "lang": "en", "format": "long", "coords": [-33.865143, 151.209900] },
   { "name": "Tokyo",           "lang": "ja", "format": "long" },
   { "name": "Singapore",       "lang": "en", "format": "long" },
   { "name": "Mumbai",          "lang": "en", "format": "long" },
@@ -33,7 +33,6 @@
           <button name="weather" value="{{tz.coords}}">get temperature</button>
         {% endif %}
       </span>
-
     </div>
 
   {% endfor %}
