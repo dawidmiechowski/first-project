@@ -1,4 +1,4 @@
-const api_key = '386a2f67d2da471e24a2608d4f4554c8';
+const api_key = '75687d9016782b963ffcb6dc0ffd382e';
 const getTemp = async (event) => {
   const button = event.target;
   const coords = JSON.parse(button.value)
