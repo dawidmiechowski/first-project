@@ -52,7 +52,11 @@ const tempTests = [
   [50, 'extremely-hot']
 ]
 
-tempTests.forEach(test => console.assert(convertTempToStringGrade(test[0]) === test[1], `expected ${test[0]} to be ${test[1]}`))
+tempTests.forEach(test => {
+    const result = convertTempToStringGrade(test[0])
+    console.assert(result === test[1], `expected ${test[0]} to be ${test[1]}`)
+  }
+)
 
 console.assert(convertTempToStringGrade(-3)  === 'not-cold-at-all', 'not-cold-at-all')
 console.assert(convertTempToStringGrade(-7) === 'slightly-cold', 'slightly-cold')
