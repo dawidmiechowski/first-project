@@ -30,3 +30,45 @@
 nav a img {
   width: 1%;
 }
+
+.not-cold-at-all {
+  background-color: aquamarine;
+}
+
+.slightly-cold {
+  background-color: aqua;
+}
+
+.moderately-cold {
+  background-color: rgb(23, 89, 187);
+}
+
+.very-cold {
+  background-color: rgb(2, 70, 216);
+}
+
+.extremely-cold {
+  background-color: rgb(0, 4, 247);
+}
+
+.not-warm-at-all {
+  background-color: rgb(207, 243, 75);
+}
+
+.slightly-warm {
+  background-color: rgb(248, 209, 36);
+}
+
+.moderately-warm {
+  background-color: rgb(240, 149, 29);
+}
+
+.very-warm {
+  background-color: rgb(216, 70, 2);
+}
+
+.extremely-warm {
+  background-color: rgb(247, 0, 0);
+}
+
+
