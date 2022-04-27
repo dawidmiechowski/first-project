@@ -49,7 +49,11 @@ const tempTests = [
   [-7, 'slightly-cold'],
   [-27, 'extremely-cold'],
   [49, 'extremely-warm'],
-  [50, 'extremely-hot']
+  [50, 'extremely-hot'],
+  [3, 'not-warm-at-all'],
+  [7, 'slightly-warm'],
+  [12, 'modertaly-warm'],
+  [20, 'very-warm']
 ]
 
 tempTests.forEach(test => {
