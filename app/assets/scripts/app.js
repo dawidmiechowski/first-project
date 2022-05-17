@@ -1,4 +1,4 @@
-const api_key = '';
+const api_key = ''; 
 const getTemp = async (event) => {
   const button = event.target;
   const coords = JSON.parse(button.value)
@@ -51,7 +51,11 @@ function convertTempToStringGrade(temp){
 const tempTests = [
   [-3, 'not-cold-at-all'],
   [-7, 'slightly-cold'],
+  [-10, 'moderately-cold'],
+  [-12, 'moderately-cold'],
+  [-20, 'very-cold'],
   [-27, 'extremely-cold'],
+  [-50, 'extremely-cold'],
   [49, 'extremely-warm'],
   [50, 'extremely-hot'],
   [3, 'not-warm-at-all'],
