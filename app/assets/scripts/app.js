@@ -1,4 +1,4 @@
-const api_key = ''; 
+const api_key = '75687d9016782b963ffcb6dc0ffd382e'; 
 const getTemp = async (event) => {
   const button = event.target;
   const coords = JSON.parse(button.value)
@@ -12,7 +12,7 @@ const getTemp = async (event) => {
   const stringTemp = convertTempToStringGrade(temp)
   console.log("." + stringTemp);
 
-  button.classList.add("" + stringTemp)
+  button.dataset.temperature = stringTemp 
 
   button.innerHTML = temp;
 }
@@ -26,17 +26,17 @@ function between(x, min, max) {
 
 function convertTempToStringGrade(temp){
   const temperatures = [
-    ["extremely-cold", -200, -26],
-    ["very-cold", -25, -16],
+    ["extremely-cold", -200, -25],
+    ["very-cold", -25, -15],
     ["moderately-cold", -15, -10],
-    ["slightly-cold", -9, -6],
+    ["slightly-cold", -10, -5],
     ["not-cold-at-all",-5, 0],
     ["not-warm-at-all", 0,5],
-    ["slightly-warm", 6, 10],
-    ["moderately-warm", 11, 15],
-    ["very-warm", 16,25],
-    ["extremely-warm", 26, 49],
-    ["extremely-hot", 50, 200]
+    ["slightly-warm", 5, 10],
+    ["moderately-warm", 10, 15],
+    ["very-warm", 15,25],
+    ["extremely-warm", 25, 49],
+    ["extremely-hot", 49, 200]
   ]
 
   for(i in temperatures){
@@ -61,7 +61,8 @@ const tempTests = [
   [3, 'not-warm-at-all'],
   [7, 'slightly-warm'],
   [12, 'moderately-warm'],
-  [20, 'very-warm']
+  [20, 'very-warm'],
+  [15.85, 'very-warm']
 ]
 
 
